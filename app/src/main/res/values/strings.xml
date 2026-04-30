@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Actividades</string>
     <string name="btn_name">Enviar</string>
+    <string name="txt_name">Nombre</string>
+    <string name="txt_age">Edad</string>
+    <string name="txt_student">¿Es estudiante?</string>
 </resources>

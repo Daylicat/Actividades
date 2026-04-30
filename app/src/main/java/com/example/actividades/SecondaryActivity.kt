@@ -23,5 +23,11 @@ class SecondaryActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val bundle = intent.extras
+
+        binding.tvwName.text = bundle?.getString("USER_NAME")
+        binding.tvwAge.text = bundle?.getInt("USER_AGE").toString()
+        binding.tvwStudent.text = bundle?.getBoolean("IS_STUDENT").toString()
     }
 }
