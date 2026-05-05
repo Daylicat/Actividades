@@ -26,7 +26,15 @@ class SecondaryActivity : AppCompatActivity() {
 
         val bundle = intent.extras
 
-        binding.tvwName.text = bundle?.getString("USER_NAME")
+        val miHeore = bundle?.getParcelable<Heroe>("USER_HEROE")
+
+        binding.tvwName.text = miHeore?.nombre
+
+
+
+
+
+        //binding.tvwName.text = bundle?.getString("USER_NAME")
         binding.tvwAge.text = bundle?.getInt("USER_AGE").toString()
         binding.tvwStudent.text = bundle?.getBoolean("IS_STUDENT").toString()
     }

@@ -28,9 +28,11 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.btnEnviar.setOnClickListener {
+            val miHeroe = Heroe("Satoru", 1, 100)
             val bundle = Bundle().apply {
                 putInt("USER_AGE", 50)
                 putBoolean("IS_STUDENT", true)
+                putParcelable("USER_HEROE", miHeroe)
             }
             val intent = Intent(this, SecondaryActivity::class.java).apply {
                 putExtra("USER_NAME", binding.txtName.text.toString())
